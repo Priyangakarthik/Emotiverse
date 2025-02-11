@@ -14,10 +14,13 @@ import matplotlib.pyplot as plt
 
 from transformers import pipeline
 
-# Load a sentiment analysis pipeline
-emotion_classifier = pipeline('sentiment-analysis')
+# Load a sentiment analysis
+from transformers import pipeline
 
-# Function to classify emotions
+# Explicitly specify the model for sentiment analysis
+emotion_classifier = pipeline('sentiment-analysis', model="distilbert-base-uncased-finetuned-sst-2-english")
+
+#Function to classify emotions
 def classify_emotion(text):
     emotion = emotion_classifier(text)
     return emotion
