@@ -197,8 +197,6 @@ def emotiverse_ui():
 emotiverse_ui()
 
 # Install Streamlit if needed
-!pip install streamlit
-
 import streamlit as st
 
 def streamlit_emotiverse():
