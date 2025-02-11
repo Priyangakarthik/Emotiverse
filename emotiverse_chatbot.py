@@ -13,13 +13,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Install libraries for NLP and chatbot functionality
-!pip install transformers
-!pip install nltk
-!pip install torch
-!pip install datasets
-!pip install scikit-learn
-
 from transformers import pipeline
 
 # Load a sentiment analysis pipeline
