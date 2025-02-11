@@ -353,10 +353,6 @@ if __name__ == '__main__':
 with open("emotiverse_chatbot.py", "w") as file:
     file.write(code)
 
-!streamlit run emotiverse_chatbot.py
-
-!streamlit run app.py
-
 # Adding avatar images based on emotions (you can use emoji as placeholders for now)
 avatar_images = {
     'POSITIVE': "😊",
