@@ -211,12 +211,6 @@ def streamlit_emotiverse():
         st.write("**Micro-task Suggestion**: ", response['Micro-task'])
         st.write("**Avatar Response**: ", response['Avatar Response'])
 
-# To run this app in Streamlit, use the following command in Colab terminal:
-# !streamlit run your_script_name.py
-
-# Install Streamlit
-!pip install streamlit
-
 import streamlit as st
 
 # Streamlit app function
