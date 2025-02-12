@@ -19,8 +19,11 @@ from transformers import pipeline
 pipe = pipeline("text-classification", model="DT12the/distilbert-sentiment-analysis")
 #Function to classify emotions
 def classify_emotion(text):
-    emotion = emotion_classifier(text)
-    return emotion
+    # Load model directly
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
+tokenizer = AutoTokenizer.from_pretrained("DT12the/distilbert-sentiment-analysis")
+model = AutoModelForSequenceClassification.from_pretrained("DT12the/distilbert-sentiment-analysis")
 
 # Test the function
 text_input = "I feel so stressed and overwhelmed today."
