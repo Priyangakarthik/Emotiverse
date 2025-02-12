@@ -20,12 +20,28 @@ pipe = pipeline("text-classification", model="DT12the/distilbert-sentiment-analy
 #Function to classify emotions
 def some_function():
     # Code inside this function must be indented
-    from transformers import AutoTokenizer, AutoModelForSequenceClassification
-    # Additional logic goes here
+   from transformers import Trainer, TrainingArguments, AutoModelForSequenceClassification
 
-tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
+model = AutoModelForSequenceClassification.from_pretrained("distilbert-base-uncased", num_labels=2)
 
-model = AutoModelForSequenceClassification.from_pretrained("DT12the/distilbert-sentiment-analysis")
+training_args = TrainingArguments(
+    output_dir="./results",
+    evaluation_strategy="epoch",
+    learning_rate=2e-5,
+    per_device_train_batch_size=16,
+    num_train_epochs=3,
+    weight_decay=0.01,
+)
+
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=your_train_dataset,
+    eval_dataset=your_eval_dataset,
+)
+
+trainer.train()
+
 
 # Test the function
 text_input = "I feel so stressed and overwhelmed today."
