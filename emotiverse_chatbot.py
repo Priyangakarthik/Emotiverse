@@ -23,7 +23,8 @@ def some_function():
     from transformers import AutoTokenizer, AutoModelForSequenceClassification
     # Additional logic goes here
 
-tokenizer = AutoTokenizer.from_pretrained("DT12the/distilbert-sentiment-analysis")
+tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
+
 model = AutoModelForSequenceClassification.from_pretrained("DT12the/distilbert-sentiment-analysis")
 
 # Test the function
