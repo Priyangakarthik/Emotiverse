@@ -18,17 +18,10 @@ from transformers import pipeline
 # Explicitly specify the model for sentiment analysis
 pipe = pipeline("text-classification", model="DT12the/distilbert-sentiment-analysis")
 #Function to classify emotions
-def classify_emotion(text):
-    # Load model directly
 def some_function():
-    # This code should be indented
-    print("Inside the function")
-
-    # Define any additional functions or import statements inside this function
+    # Code inside this function must be indented
     from transformers import AutoTokenizer, AutoModelForSequenceClassification
-
-    # Add other code related to this function
-
+    # Additional logic goes here
 
 tokenizer = AutoTokenizer.from_pretrained("DT12the/distilbert-sentiment-analysis")
 model = AutoModelForSequenceClassification.from_pretrained("DT12the/distilbert-sentiment-analysis")
