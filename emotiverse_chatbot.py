@@ -21,7 +21,13 @@ pipe = pipeline("text-classification", model="DT12the/distilbert-sentiment-analy
 def classify_emotion(text):
     # Load model directly
 def some_function():
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
+    # This code should be indented
+    print("Inside the function")
+
+    # Define any additional functions or import statements inside this function
+    from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
+    # Add other code related to this function
 
 
 tokenizer = AutoTokenizer.from_pretrained("DT12the/distilbert-sentiment-analysis")
