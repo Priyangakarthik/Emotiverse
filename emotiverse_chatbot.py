@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 from transformers import pipeline
 
 # Explicitly specify the model for sentiment analysis
-emotion_classifier = pipeline('sentiment-analysis', model="./Distilbert_Model")
+emotion_classifier = pipeline('sentiment-analysis',model="\Users\riyad\Downloads\Distilbert_Model>")
 
 
 #Function to classify emotions
